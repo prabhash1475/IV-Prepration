@@ -1,5 +1,5 @@
 import React from "react";
-import { Box} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 import Products from "../pages/Products";
 import Order from "../pages/Order";
@@ -11,7 +11,7 @@ const Allroute = () => {
     <Box>
       <Routes>
         <Route path="/" element={<Products />} />
-        <Route path="/:id" element={<SingleProduct />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/order" element={<Order />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
