@@ -3,13 +3,19 @@ import React from "react";
 
 export const ProductCard = ({ product }) => {
   return (
-    <Box id="product-container">
-      <Image src={product.image} />
+    <Box
+      //   border={"1px solid red"}
+      display={"flex"}
+      justifyContent={"center"}
+      textAlign={"left"}
+      id="product-container"
+    >
       <Box>
-        <Heading>{product.title}</Heading>
-        <Heading>{product.category}</Heading>
-        <Heading>{product.price}</Heading>
-        <Heading>{product.title}</Heading>
+        <Image src={product.image} />
+        <Heading fontSize={"15px"}>{product.title}</Heading>
+        <Heading fontSize={"15px"}>{product.category}</Heading>
+        <Heading fontSize={"15px"}>Price:{product.price}</Heading>
+        <Heading fontSize={"15px"}>{product.title}</Heading>
       </Box>
     </Box>
   );
