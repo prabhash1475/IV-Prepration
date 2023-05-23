@@ -11,6 +11,7 @@ const initState = {
   order: [],
   cart: [],
   SingleProduct: {},
+  filteredData: [],
 };
 export const store = createStore(
   Reducer,

@@ -4,20 +4,22 @@ import { getProduct } from "../Reducer/action";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import { ProductCard } from "../components/ProductCard";
 import { Pagination } from "../components/Pagination";
+import { Functionality } from "../components/Functionality";
 
 const Products = () => {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.product);
+  const filteredData = useSelector((store) => store.filteredData);
 
   // pagination
   const [page, setPage] = useState(1);
   const perPage = 12;
-  const totalPages = Math.ceil(products.length / perPage);
+  const totalPages = Math.ceil(filteredData.length / perPage);
 
   let end = page * perPage;
   let start = end - perPage;
 
-  let paginatedProducts = products.slice(start, end);
+  let paginatedProducts = filteredData.slice(start, end);
 
   useEffect(() => {
     dispatch(getProduct());
@@ -36,6 +38,7 @@ const Products = () => {
 
   return (
     <>
+      <Functionality />
       <SimpleGrid columns={4} gap={2}>
         {paginatedProducts.map((el, index) => {
           return <ProductCard product={el} />;
