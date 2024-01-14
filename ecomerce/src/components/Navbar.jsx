@@ -1,10 +1,17 @@
-import { Box } from "@chakra-ui/react";
+import { Box, UnorderedList } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
 
 const Navbar = () => {
   return (
-    <Box display={"flex"} justifyContent={"space-evenly"} bg={"teal.400"}>
+    <Box
+      p={6}
+      display={"flex"}
+      fontSize={"lg"}
+      fontWeight={"extrabold"}
+      justifyContent={"space-evenly"}
+      bg={"teal.400"}
+    >
       <Box>
         <Link to="/">Products </Link>
       </Box>

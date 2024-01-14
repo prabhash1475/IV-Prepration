@@ -1,6 +1,7 @@
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const FILTER_PRODUCT = "FILTER_PRODUCT";
 export const SORT_PRODUCT = "SORT_PRODUCT";
+export const ADD_CURRENT_PRODUCT = "ADD_CURRENT_PRODUCT";
 
 // ACTION CREATER
 export const getProduct = () => async (dispatch) => {
@@ -32,6 +33,13 @@ export const filterProduct = (data) => {
 export const sortProduct = (data) => {
   return {
     type: SORT_PRODUCT,
+    payload: data,
+  };
+};
+
+export const addCurrent = (data) => {
+  return {
+    type: ADD_CURRENT_PRODUCT,
     payload: data,
   };
 };

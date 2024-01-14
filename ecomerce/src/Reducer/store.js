@@ -10,7 +10,7 @@ const initState = {
   product: [],
   order: [],
   cart: [],
-  SingleProduct: {},
+  currentProduct: {},
   filteredData: [],
 };
 export const store = createStore(

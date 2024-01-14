@@ -1,4 +1,9 @@
-import { FILTER_PRODUCT, GET_PRODUCTS, SORT_PRODUCT } from "./action";
+import {
+  ADD_CURRENT_PRODUCT,
+  FILTER_PRODUCT,
+  GET_PRODUCTS,
+  SORT_PRODUCT,
+} from "./action";
 
 export const Reducer = (state, { type, payload }) => {
   switch (type) {
@@ -10,6 +15,9 @@ export const Reducer = (state, { type, payload }) => {
 
     case SORT_PRODUCT:
       return { ...state, filteredData: payload };
+
+    case ADD_CURRENT_PRODUCT:
+      return { ...state, currentProduct: payload };
     default:
       return state;
   }
